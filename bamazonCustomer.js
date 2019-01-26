@@ -64,6 +64,7 @@ function validatePurchase(prodID, qty) {
     }, function (err, results) {
         if (err) throw err;
 
+        // check if product ID is valid
         if (results.length === 0) {
             console.log(chalk.red("Please enter a valid product ID"));
             showProducts();
