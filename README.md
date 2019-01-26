@@ -4,20 +4,6 @@
 
 bamazon is an Amazon-like CLI app that takes orders from customers and depletes stock from the store's inventory as valid.
 
-### Successful Purchase
-
-![Purchase](/gifs/purchase.gif)
-
-### Invalid Product ID
-
-![Invalid ProductID](/gifs/invalid-productID.gif)
-
-### Insufficient quantity
-
-![Insufficient quantity](/gifs/insufficient-quantity.gif)
-
-## Details
-
 1. Running `node bamazonCustomer.js` in the terminal will first display all of the items available for sale, including ids, names, and prices.
 
 2. The app then prompts users with two messages:
@@ -44,3 +30,17 @@ bamazon is an Amazon-like CLI app that takes orders from customers and depletes 
 [console.table](https://www.npmjs.com/package/console.table)
 
 [dotenv](https://www.npmjs.com/package/dotenv)
+
+## Demo
+
+### Successful Purchase
+
+![Purchase](/gifs/purchase.gif)
+
+### Invalid Product ID
+
+![Invalid ProductID](/gifs/invalid-productID.gif)
+
+### Insufficient quantity
+
+![Insufficient quantity](/gifs/insufficient-quantity.gif)
