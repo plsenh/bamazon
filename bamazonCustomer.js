@@ -24,6 +24,7 @@ connection.connect(function (err) {
 function showProducts() {
     connection.query("SELECT * FROM products", function (err, res) {
         if (err) throw err;
+        console.log();
         console.table(res);
         purchaseInquiry();
     })
@@ -54,41 +55,59 @@ function purchaseInquiry() {
 }
 
 function validatePurchase(prodID, qty) {
-    // query the database for all items being auctioned
-    connection.query("SELECT * FROM products", function (err, results) {
+
+    var query = "SELECT * FROM products WHERE ?";
+
+    // query the database for all items being sold
+    connection.query(query, {
+        item_id: prodID
+    }, function (err, results) {
         if (err) throw err;
 
-        var chosenId;
-        for (var i = 0; i < results.length; i++) {
-            if (results[i].item_id === prodID) {
-                chosenId = results[i];
+        if (results.length === 0) {
+            console.log(chalk.red("Please enter a valid product ID"));
+            showProducts();
+        } else {
+            var chosenId;
+            for (var i = 0; i < results.length; i++) {
+                if (results[i].item_id === prodID) {
+                    chosenId = results[i];
+                }
+            }
+
+            // check if quantity is valid
+            if (chosenId.stock_quantity >= parseInt(qty)) {
+                // update db qty and prompt to buy more products
+                connection.query(
+                    "UPDATE products SET ? WHERE ?",
+                    [{
+                            stock_quantity: chosenId.stock_quantity - qty
+                        },
+                        {
+                            item_id: prodID
+                        }
+                    ],
+                    function (error) {
+                        if (error) throw err;
+
+                        if (qty > 0) {
+                            console.log(chalk.green("\nOrder placed successfully!"));
+                            console.log("Item: " + chalk.yellow(chosenId.product_name) + ", Quantity: " + chalk.yellow(qty));
+                            console.log("Total Cost: " + chalk.yellow("$" + (chosenId.price * qty).toFixed(2)) + "\n");
+                        } else {
+                            console.log("\nOrder of " + chosenId.product_name + " canceled\n");
+                        }
+
+                        buyMore();
+                    }
+                );
+            } else {
+                // qty was invalid
+                console.log(chalk.red("Sorry, insufficient quantity, please try again."));
+                showProducts();
             }
         }
 
-        // check if quantity is valid
-        if (chosenId.stock_quantity >= parseInt(qty)) {
-            // update db qty and prompt to buy more products
-            connection.query(
-                "UPDATE products SET ? WHERE ?",
-                [{
-                        stock_quantity: chosenId.stock_quantity - qty
-                    },
-                    {
-                        item_id: prodID
-                    }
-                ],
-                function (error) {
-                    if (error) throw err;
-                    console.log("Order placed successfully!");
-                    console.log("Total Cost: $" + chosenId.price * qty);
-                    buyMore();
-                }
-            );
-        } else {
-            // qty was invalid
-            console.log("Sorry, insufficient quantity, please try again.");
-            showProducts();
-        }
     });
 }
 
