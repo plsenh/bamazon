@@ -4,8 +4,9 @@
 
 bamazon is an Amazon-like CLI app that takes orders from customers and depletes stock from the store's inventory as valid.
 
-## Demo
+### Demo
 
+![Purchase](/gifs/purchase.gif)
 
 ## Details
 
@@ -24,9 +25,14 @@ bamazon is an Amazon-like CLI app that takes orders from customers and depletes 
 
 5. the storefront will reflect the updated remaining quantity upon the next potential purchase.
 
-## npm packages used
+### npm packages used
 
-Inquirer
-MySQL
-chalk
-console.table
+[Inquirer](https://www.npmjs.com/package/inquirer)
+
+[MySQL](https://www.npmjs.com/package/mysql)
+
+[chalk](https://www.npmjs.com/package/chalk)
+
+[console.table](https://www.npmjs.com/package/console.table)
+
+[dotenv](https://www.npmjs.com/package/dotenv)
