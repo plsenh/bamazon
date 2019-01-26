@@ -4,15 +4,15 @@
 
 bamazon is an Amazon-like CLI app that takes orders from customers and depletes stock from the store's inventory as valid.
 
-###Successful Purchase
+### Successful Purchase
 
 ![Purchase](/gifs/purchase.gif)
 
-###Invalid Product ID
+### Invalid Product ID
 
 ![Invalid ProductID](/gifs/invalid-productID.gif)
 
-###Insufficient quantity
+### Insufficient quantity
 
 ![Insufficient quantity](/gifs/insufficient-quantity.gif)
 
