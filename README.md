@@ -36,7 +36,11 @@ bamazon is an Amazon-like CLI app that takes orders from customers and depletes 
 ### npm packages used
 
 [Inquirer](https://www.npmjs.com/package/inquirer)
+
 [MySQL](https://www.npmjs.com/package/mysql)
+
 [chalk](https://www.npmjs.com/package/chalk)
+
 [console.table](https://www.npmjs.com/package/console.table)
+
 [dotenv](https://www.npmjs.com/package/dotenv)
