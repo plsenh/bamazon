@@ -1,12 +1,12 @@
 # bamazon
 
-## Overview
+## Overview:
 
 Using MySQL & Node.js, bamazon is an Amazon-like CLI app that takes orders from customers and depletes stock from the store's inventory as valid.
 
 ---
 
-## Details
+## Details:
 
 1. Running `node bamazonCustomer.js` in the terminal will first display all of the items available for sale, including ids, names, and prices.
 
@@ -25,7 +25,7 @@ Using MySQL & Node.js, bamazon is an Amazon-like CLI app that takes orders from 
 
 ---
 
-## Demo
+## Demo:
 
 ### Successful Purchase
 
