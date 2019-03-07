@@ -44,7 +44,10 @@ Using MySQL & Node.js, bamazon is an Amazon-like CLI app that takes orders from 
 ## Built with:
 
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - High-level programming language.
+- [MAMP](https://www.mamp.info/en/) - Local server environment.
+- [MySQL Workbench](https://www.mysql.com/products/workbench/) - Visual database design tool that integrates SQL development, administration, database design, creation and maintenance into a single integrated development environment for the MySQL database system.
 - [Node.js](https://nodejs.org/en/) - Open-source run-time environment that executes JS code outside of a browser.
+- [Visual Studio Code](https://code.visualstudio.com/) - Source code editor developed by Microsoft.
 
 ## npm packages used
 
