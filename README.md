@@ -29,15 +29,15 @@ Using MySQL & Node.js, bamazon is an Amazon-like CLI app that takes orders from 
 
 ### Successful Purchase
 
-![Purchase](/gifs/purchase.gif)
+![Purchase](./gifs/purchase.gif)
 
 ### Invalid Product ID
 
-![Invalid ProductID](/gifs/invalid-productID.gif)
+![Invalid ProductID](./gifs/invalid-productID.gif)
 
 ### Insufficient quantity
 
-![Insufficient quantity](/gifs/insufficient-quantity.gif)
+![Insufficient quantity](./gifs/insufficient-quantity.gif)
 
 ---
 
