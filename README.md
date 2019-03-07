@@ -54,8 +54,8 @@ Using MySQL & Node.js, bamazon is an Amazon-like CLI app that takes orders from 
 - [chalk](https://www.npmjs.com/package/chalk)
 - [console.table](https://www.npmjs.com/package/console.table)
 - [dotenv](https://www.npmjs.com/package/dotenv)
-- [Inquirer](https://www.npmjs.com/package/inquirer)
-- [MySQL](https://www.npmjs.com/package/mysql)
+- [inquirer](https://www.npmjs.com/package/inquirer)
+- [mysql](https://www.npmjs.com/package/mysql)
 
 ---
 
