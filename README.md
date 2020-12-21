@@ -61,4 +61,4 @@ Using MySQL & Node.js, bamazon is an Amazon-like CLI app that takes orders from 
 
 ## Author:
 
-- **Pauline Senh** - [plsenh](https://github.com/plsenh)
+- **Pauline S.** - [paulinegithub](https://github.com/paulinegithub)
